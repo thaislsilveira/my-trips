@@ -3,21 +3,21 @@ import LinkWrapper from 'components/LinkWrapper'
 
 import * as S from './styles'
 
-const PagesTemplate = () => (
+export type PageTemplateProps = {
+  heading: string
+  body: string
+}
+
+const PagesTemplate = ({ heading, body }: PageTemplateProps) => (
   <S.Content>
     <LinkWrapper href="/">
       <CloseOutline size={32} />
     </LinkWrapper>
 
-    <S.Heading>My Trips</S.Heading>
+    <S.Heading>{heading}</S.Heading>
 
     <S.Body>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis
-        enim quis condimentum venenatis. In ultricies rhoncus purus, at
-        imperdiet sem luctus sit amet. Fusce tristique aliquet libero, eget
-        mattis dui hendrerit non.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: body }} />
     </S.Body>
   </S.Content>
 )
