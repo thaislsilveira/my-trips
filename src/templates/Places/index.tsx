@@ -22,10 +22,11 @@ export type PlacesTemplateProps = {
   }
 }
 
-export default function Placetemplate({ place }: PlacesTemplateProps) {
+export default function PlacesTemplate({ place }: PlacesTemplateProps) {
   const router = useRouter()
 
   if (router.isFallback) return null
+
   return (
     <>
       <LinkWrapper href="/">
@@ -35,6 +36,7 @@ export default function Placetemplate({ place }: PlacesTemplateProps) {
       <S.Wrapper>
         <S.Container>
           <S.Heading>{place.name}</S.Heading>
+
           <S.Body
             dangerouslySetInnerHTML={{ __html: place.description?.html || '' }}
           />
