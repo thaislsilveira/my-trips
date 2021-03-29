@@ -1,5 +1,10 @@
 <h1 align='center'>My Trips ainda em construção 🚧 </h1> 
 
+## Projeto Construído 👩🏽‍💻
+
+![mytrips](https://github.com/thaislsilveira/my-trips/blob/main/public/img/my-trips.png)
+
+
 ## Tecnologias utilizadas 🚀
 
 <ul>
